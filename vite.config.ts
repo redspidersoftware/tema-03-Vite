@@ -8,7 +8,10 @@ export default defineConfig({
   resolve: {
     alias: {
     "@": path.resolve(__dirname, "src"),
-    "@components": path.resolve(__dirname, "src/components")
-    }
+    "@components": path.resolve(__dirname, "src/components"),
+    "@hooks": path.resolve(__dirname, "src/hooks"),
+
+    },
+    extensions:[".ts",".vue"],
   }
 })
