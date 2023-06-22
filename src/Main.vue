@@ -43,7 +43,7 @@
   </template>
   
   <script setup lang="ts">
-  import {ref} from "vue"
+  import {ref, provide} from "vue"
   //#region  tema 3
 // import {ref, computed} from "vue"
 // const valorInput = ref("Añada la sal a la salsa")
@@ -68,8 +68,10 @@
 //import BotonOnOff from "@components/BotonOnOff.vue"
 //@ts-ignore
 //import TextoPersonalizado from "@components/TextoPersonalizado.vue"
-
+//@ts-ignore
 import EventosComunicacion from "./components/EventosComunicacion.vue"
+provide("version","0.1")
+
 
 
 //const modoOscuro = ref(true)
