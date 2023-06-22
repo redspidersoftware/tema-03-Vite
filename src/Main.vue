@@ -1,5 +1,6 @@
 <template>
-    
+
+
     <!--<div>
         Helo world
         <input type = "text" v-model="valorInput" />
@@ -15,12 +16,13 @@
         <BotonOnOff :active ="modoOscuro" :toggle="cabiaModo"/>
         <TextoPersonalizado texto="Este es el texto" :esOscuro ="modoOscuro"/>
         -->
-    
+    <!--
         <AboutUs v-if="pagina==='AboutUS'"/>
         <Contact v-if="pagina==='Contac'"/>
         <Home    v-if="pagina==='Home'"/>
         <Math    v-if="pagina==='Math'"/>
         <Series    v-if="pagina==='Series'"/>
+    -->
         <!--<div>
             <button @click="() => pagina ='Home'">Home</button>
             <button @click="() => pagina ='Contac'">Contacto</button>
@@ -28,6 +30,7 @@
         </div>-->
 
         <!--<p> otra forma de redireccionar</p>-->
+        <!--
         <div>
             <button @click="(redirige('Home'))">Home</button>
             <button @click="(redirige('Contac')) ">Contacto</button>
@@ -35,6 +38,8 @@
             <button @click="(redirige('Math'))">Math</button>
             <button @click="(redirige('Series'))">Series</button>
         </div>
+        -->
+    <EventosComunicacion/>
   </template>
   
   <script setup lang="ts">
@@ -64,20 +69,23 @@
 //@ts-ignore
 //import TextoPersonalizado from "@components/TextoPersonalizado.vue"
 
+import EventosComunicacion from "./components/EventosComunicacion.vue"
+
+
 //const modoOscuro = ref(true)
 
 // const cabiaModo=() =>{
 //     modoOscuro.value = !modoOscuro.value
 // }
 
-import { AboutUs,Contact,Home,Math, Series} from "./views"
-import{Routes} from "./models"
+// import { AboutUs,Contact,Home,Math, Series} from "./views"
+// import{Routes} from "./models"
 
-const pagina = ref<Routes>("Home")
+// const pagina = ref<Routes>("Home")
 
-const redirige = (ruta:Routes) =>{
-    pagina.value = ruta
-}
+// const redirige = (ruta:Routes) =>{
+//     pagina.value = ruta
+// }
 
   </script>
   <style scoped>
