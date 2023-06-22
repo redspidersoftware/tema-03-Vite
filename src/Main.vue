@@ -11,11 +11,30 @@
     <MiContador />
     <ListaTareas />
     -->
+        <!--
         <BotonOnOff :active ="modoOscuro" :toggle="cabiaModo"/>
         <TextoPersonalizado texto="Este es el texto" :esOscuro ="modoOscuro"/>
-    <div>
+        -->
+    
+        <AboutUs v-if="pagina==='AboutUS'"/>
+        <Contact v-if="pagina==='Contac'"/>
+        <Home    v-if="pagina==='Home'"/>
+        <Math    v-if="pagina==='Math'"/>
+        <Series    v-if="pagina==='Series'"/>
+        <!--<div>
+            <button @click="() => pagina ='Home'">Home</button>
+            <button @click="() => pagina ='Contac'">Contacto</button>
+            <button @click="() => pagina ='AboutUS'">Sobre nosotros</button>
+        </div>-->
 
-    </div>
+        <!--<p> otra forma de redireccionar</p>-->
+        <div>
+            <button @click="(redirige('Home'))">Home</button>
+            <button @click="(redirige('Contac')) ">Contacto</button>
+            <button @click="(redirige('AboutUS'))">Sobre nosotros</button>
+            <button @click="(redirige('Math'))">Math</button>
+            <button @click="(redirige('Series'))">Series</button>
+        </div>
   </template>
   
   <script setup lang="ts">
@@ -35,20 +54,29 @@
 
 //  Pantalla 1 - Lista de tareas
 //@ts-ignore
-import ListaTareas from "@components/ListaTareas.vue"
+//import ListaTareas from "@components/ListaTareas.vue"
 //@ts-ignore
-import MiContador from "@components/MiContador.vue"
+//import MiContador from "@components/MiContador.vue"
 //@ts-ignore
-import ConatadorComposable from "@components/ConatadorComposable.vue"
+//import ConatadorComposable from "@components/ConatadorComposable.vue"
 //@ts-ignore
-import BotonOnOff from "@components/BotonOnOff.vue"
+//import BotonOnOff from "@components/BotonOnOff.vue"
 //@ts-ignore
-import TextoPersonalizado from "@components/TextoPersonalizado.vue"
+//import TextoPersonalizado from "@components/TextoPersonalizado.vue"
 
-const modoOscuro = ref(true)
+//const modoOscuro = ref(true)
 
-const cabiaModo=() =>{
-    modoOscuro.value = !modoOscuro.value
+// const cabiaModo=() =>{
+//     modoOscuro.value = !modoOscuro.value
+// }
+
+import { AboutUs,Contact,Home,Math, Series} from "./views"
+import{Routes} from "./models"
+
+const pagina = ref<Routes>("Home")
+
+const redirige = (ruta:Routes) =>{
+    pagina.value = ruta
 }
 
   </script>
