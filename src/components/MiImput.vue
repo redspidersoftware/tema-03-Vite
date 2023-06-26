@@ -1,17 +1,15 @@
 <template>
-    <h2> Mi imput</h2>
-    <input type="text" :value="valor" @input="cambiaValor"/>
+    <h3>Mi input</h3>
+    <input type="text" :value="value" @input="handleChange" />
+    <span>{{ value }}</span>
 </template>
 
 <script setup lang="ts">
-    defineProps<{
-        valor:string
-    }>()
+defineProps(["value"])
 
-    const emit = defineEmits(["cambiaValor"])
+const emit = defineEmits(["update:value"])
 
-    const cambiaValor  = (evento: Event) =>{
-        emit("cambiaValor",evento)
-    }
-
+const handleChange = (event: Event) => {
+    emit("update:value", (event.target as HTMLInputElement).value)
+}
 </script>
