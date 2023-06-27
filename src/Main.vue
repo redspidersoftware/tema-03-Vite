@@ -42,6 +42,7 @@
     <!--<EventosComunicacion/>-->
     <!--<CicloVida v-if="mostrar"/>
     <button @click="calcular">  vuelve a provar</button>-->
+    <!-- contoles en formularios
     <MiFormulario/>
     <AreaTexto/>
     <CheckBoxes/>
@@ -49,10 +50,20 @@
     <InputDesplegable />
     <InputCustom v-model="valorMiInput" />
     <EnvioFormularios />
+    -->
+    <!--<EnviarFormulario />-->
+    <!-- <ValidacionesYup /> -->
+    <!-- <ReglasGlobales /> -->
+    <!-- <div v-if="esVisible">Esto debería verse</div> -->
+    <!-- <DirectivasPersonalizadas /> -->
+    <!-- <DirectivasParametros /> -->
+
+    <!-- <MiContador /> -->
+    <MiLoader />
   </template>
   
   <script setup lang="ts">
-  import {ref, provide} from "vue"
+  //import {ref, provide} from "vue"
   //#region  tema 3
 // import {ref, computed} from "vue"
 // const valorInput = ref("Añada la sal a la salsa")
@@ -79,23 +90,33 @@
 //import TextoPersonalizado from "@components/TextoPersonalizado.vue"
 //@ts-ignore
 //import EventosComunicacion from "./components/EventosComunicacion.vue"
-import CicloVida from "./components/CicloVida.vue"
-import MiFormulario from "./components/MiFormulario.vue"
-import AreaTexto from "./components/AreaTexto.vue"
-import CheckBoxes from "./components/CheckBoxes.vue"
-import RadioButton from "./components/RadioButton.vue"
-import InputDesplegable from "./components/InputDesplegable.vue"
-import InputCustom from "./components/InputCustom.vue"
-import EnvioFormularios from "./components/EnvioFormularios.vue"
+// import CicloVida from "./components/CicloVida.vue"
+// import MiFormulario from "./components/MiFormulario.vue"
+// import AreaTexto from "./components/AreaTexto.vue"
+// import CheckBoxes from "./components/CheckBoxes.vue"
+// import RadioButton from "./components/RadioButton.vue"
+// import InputDesplegable from "./components/InputDesplegable.vue"
+// import InputCustom from "./components/InputCustom.vue"
+// import EnvioFormularios from "./components/EnvioFormularios.vue"
 
+//import EnviarFormulario from './components/EnviarFormulario.vue';
 
+// import ValidacionesYup from './components/ValidacionesYup.vue';
+// import ReglasGlobales from './components/ReglasGlobales.vue';
 
-const mostrar = ref(Math.random() >0.5)
-const calcular=() =>{
-    mostrar.value = Math.random() >0.5
-}
-const valorMiInput = ref("Hola mundo")
-provide("version","0.1")
+// import DirectivasPersonalizadas from "./components/DirectivasPersonalizadas.vue"
+// import DirectivasParametros from "./components/DirectivasParametros.vue"
+// const esVisible = true
+
+// import MiContador from "./components/MiOtroContador.vue"
+
+import MiLoader from "./components/MiLoader.vue"
+// const mostrar = ref(Math.random() >0.5)
+// const calcular=() =>{
+//     mostrar.value = Math.random() >0.5
+// }
+// const valorMiInput = ref("Hola mundo")
+// provide("version","0.1")
 
 
 
