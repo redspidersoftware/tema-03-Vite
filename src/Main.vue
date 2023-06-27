@@ -1,6 +1,5 @@
 <template>
-
-
+  <div>
     <!--<div>
         Helo world
         <input type = "text" v-model="valorInput" />
@@ -12,7 +11,7 @@
     <MiContador />
     <ListaTareas />
     -->
-        <!--
+    <!--
         <BotonOnOff :active ="modoOscuro" :toggle="cabiaModo"/>
         <TextoPersonalizado texto="Este es el texto" :esOscuro ="modoOscuro"/>
         -->
@@ -23,14 +22,14 @@
         <Math    v-if="pagina==='Math'"/>
         <Series    v-if="pagina==='Series'"/>
     -->
-        <!--<div>
+    <!--<div>
             <button @click="() => pagina ='Home'">Home</button>
             <button @click="() => pagina ='Contac'">Contacto</button>
             <button @click="() => pagina ='AboutUS'">Sobre nosotros</button>
         </div>-->
 
-        <!--<p> otra forma de redireccionar</p>-->
-        <!--
+    <!--<p> otra forma de redireccionar</p>-->
+    <!--
         <div>
             <button @click="(redirige('Home'))">Home</button>
             <button @click="(redirige('Contac')) ">Contacto</button>
@@ -59,12 +58,14 @@
     <!-- <DirectivasParametros /> -->
 
     <!-- <MiContador /> -->
+
     <MiLoader />
-  </template>
-  
-  <script setup lang="ts">
-  //import {ref, provide} from "vue"
-  //#region  tema 3
+  </div>
+</template>
+
+<script setup lang="ts">
+//import {ref, provide} from "vue"
+//#region  tema 3
 // import {ref, computed} from "vue"
 // const valorInput = ref("Añada la sal a la salsa")
 
@@ -110,15 +111,13 @@
 
 // import MiContador from "./components/MiOtroContador.vue"
 
-import MiLoader from "./components/MiLoader.vue"
+import MiLoader from "./components/MiLoader.vue";
 // const mostrar = ref(Math.random() >0.5)
 // const calcular=() =>{
 //     mostrar.value = Math.random() >0.5
 // }
 // const valorMiInput = ref("Hola mundo")
 // provide("version","0.1")
-
-
 
 //const modoOscuro = ref(true)
 
@@ -134,9 +133,5 @@ import MiLoader from "./components/MiLoader.vue"
 // const redirige = (ruta:Routes) =>{
 //     pagina.value = ruta
 // }
-
-  </script>
-  <style scoped>
-  
-  </style>
-  
+</script>
+<style scoped></style>

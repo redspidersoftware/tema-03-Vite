@@ -1,4 +1,5 @@
 <template>
+  <div>
     <h2>Mi loader</h2>
     <span v-if="loader.loading">
         <span class="loader" :style="`border-left-color:${loader.color}`"></span>
@@ -8,6 +9,7 @@
     <button @click="stopLoading">Stop</button>
     <button @click="setLoading">Start</button>
     <input v-focus type="text" />
+  </div>
 </template>
 
 <script setup lang="ts">
